@@ -19,6 +19,8 @@ body {
     width: 100%;
     max-width: 1400px;
     margin-top: 1rem;
+    max-height: 90vh;
+    margin-bottom: 4rem;
     /* margin-right: 1rem; */
 }
 
@@ -182,6 +184,8 @@ body {
 @media (max-width: 1024px) {
     .main-container {
         flex-direction: column;
+        max-height: none;
+        margin-bottom: 0;
     }
     
     .video-grid {
@@ -213,6 +217,8 @@ body {
 @media screen and (orientation: landscape) and (max-width: 1024px) {
   .main-container {
     flex-direction: column;
+    max-height: none;
+    margin-bottom: 0;
   }
 
   .video-grid {
@@ -235,3 +241,60 @@ body {
   }
 }
 
+
+.navbar {
+  width: 100%;
+  background-color: #1f1f1f;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  color: #ff0033;
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ff0033;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 0.5rem;
+  }
+
+  .nav-links a {
+    margin: 0 1rem 0.5rem 0;
+  }
+}
+
+
+.app-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+}
