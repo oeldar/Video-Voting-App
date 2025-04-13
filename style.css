@@ -257,7 +257,7 @@ body {
 
 .app-title {
   font-size: 1.8rem;
-  color: #ff0033;
+  color: #f4f4f4;
   margin: 0;
 }
 
@@ -297,4 +297,68 @@ body {
   flex-direction: column;
   padding: 1rem;
   box-sizing: border-box;
+}
+
+.rankings-section {
+  padding: 2rem 0;
+}
+
+.rankings-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ranking-entry {
+  display: flex;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+}
+
+.ranking-entry:hover {
+  transform: scale(1.01);
+}
+
+.ranking-entry img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 1.2rem;
+}
+
+.rank-number {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ff0033;
+  margin-right: 1rem;
+  width: 40px;
+  text-align: center;
+}
+
+.ranking-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.ranking-details .video-title {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+.ranking-details .video-info {
+  font-size: 0.95rem;
+  color: #aaa;
 }
