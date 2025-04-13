@@ -52,10 +52,26 @@ body {
 .video_container:hover {
     transform: scale(1.03);
   }
-  
-  
+
+  /* Webkit-based browser support */
+.video-grid::-webkit-scrollbar, .top-videos::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.video-grid::-webkit-scrollbar-track, .top-videos::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.video-grid::-webkit-scrollbar-thumb, .top-videos::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
 
   .video_container {
+    height: 300px; /* fiksna visina (ili koliko želiš) */
+    flex-shrink: 0; /* da se ne skuplja */
     background-color: #1f1f1f;
     border-radius: 20px;
     padding: 1rem;
@@ -68,6 +84,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.2s;
     overflow: hidden;
+    scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #444 #111; /* Firefox: thumb i track */
   }
   
   .video_container iframe {
