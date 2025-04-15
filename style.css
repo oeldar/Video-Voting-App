@@ -12,6 +12,8 @@ body {
     overflow-x: hidden;
 }
 
+
+
 .main-container {
     display: flex;
     flex-direction: row;
@@ -25,10 +27,15 @@ body {
 }
 
 .video-grid {
-    display: grid;
-    
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, minmax(200px, 1fr)); */
    /* grid-template-rows: repeat(2, minmax(150px, 1fr)); */
+
+   display: grid;
+   grid-template-columns: repeat(2, 1fr); /* Dve kolone */
+   gap: 20px; /* razmak između videa, po želji */
+   padding: 10px; /* dodatno, ako hoćeš malo unutrašnjeg razmaka */
+
     gap: 1rem;
     flex: 2;
     max-height: 90vh;
@@ -36,6 +43,7 @@ body {
     padding: 1rem;
     border-radius: 30px;
     background-color: #181818;
+  
 }
 
 .top-videos {
@@ -89,9 +97,14 @@ body {
   height: auto;        /* ili samo izbaci height skroz */
   min-height: 0;       /* osiguraj da se ne forsira neka druga visina */
   flex-shrink: 0; 
+
+  height: auto;
+  height: 340px;
+
   }
   
   .video_container iframe {
+   
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 10px;
@@ -181,8 +194,14 @@ body {
 
 /* Rest of your existing CSS remains the same */
 
+@media (min-width: 1025px) {
+  .video_container {
+  }
+
+}
+
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
     .main-container {
         flex-direction: column;
         max-height: none;
@@ -190,7 +209,8 @@ body {
     }
 
     .video_container {
-      background-color: red;
+      /* background-color: red; */
+      height: auto;
     }
     
     .video-grid {
@@ -214,6 +234,16 @@ body {
         grid-template-rows: none;
         max-height: 50vh;
     }
+
+    .video_container {
+      height: auto;
+    }
+
+    .video-grid {
+      width: 100%;
+      max-width: 100%;
+      max-height: none;
+  }
 }
 
 
@@ -233,8 +263,8 @@ body {
   }
 
   .video_container {
-    height: auto;        /* ili samo izbaci height skroz */
-    min-height: 0;       /* osiguraj da se ne forsira neka druga visina */
+    height: auto;        
+    min-height: 0;     
     flex-shrink: 0; 
   }
 
@@ -413,3 +443,4 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
