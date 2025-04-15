@@ -72,9 +72,6 @@ body {
 }
 
   .video_container {
-    min-height: 330px;   /* minimalna visina umesto fiksne */
-    height: auto;   
-    flex-shrink: 0; /* da se ne skuplja */
     background-color: #1f1f1f;
     border-radius: 20px;
     padding: 1rem;
@@ -88,6 +85,10 @@ body {
     overflow: hidden;
     scrollbar-width: thin; /* Firefox */
   scrollbar-color: #444 #111; /* Firefox: thumb i track */
+
+  height: auto;        /* ili samo izbaci height skroz */
+  min-height: 0;       /* osiguraj da se ne forsira neka druga visina */
+  flex-shrink: 0; 
   }
   
   .video_container iframe {
@@ -187,14 +188,15 @@ body {
         max-height: none;
         margin-bottom: 0;
     }
+
+    .video_container {
+      background-color: red;
+    }
     
     .video-grid {
         width: 100%;
         max-width: 100%;
         max-height: none;
-
-        
-        
     }
     
     .top-videos {
@@ -231,8 +233,9 @@ body {
   }
 
   .video_container {
-    height: 300px; /* fiksna visina (ili koliko želiš) */
-    flex-shrink: 0; /* da se ne skuplja */
+    height: auto;        /* ili samo izbaci height skroz */
+    min-height: 0;       /* osiguraj da se ne forsira neka druga visina */
+    flex-shrink: 0; 
   }
 
   .video_container iframe {
