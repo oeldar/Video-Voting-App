@@ -1,5 +1,4 @@
 body {
-    /* margin: 0; */
     background-color: #121212;
     color: white;
     font-family: sans-serif;
@@ -12,8 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-
-
 .main-container {
     display: flex;
     flex-direction: row;
@@ -23,19 +20,13 @@ body {
     margin-top: 1rem;
     max-height: 90vh;
     margin-bottom: 4rem;
-    /* margin-right: 1rem; */
 }
 
 .video-grid {
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, minmax(200px, 1fr)); */
-   /* grid-template-rows: repeat(2, minmax(150px, 1fr)); */
-
    display: grid;
-   grid-template-columns: repeat(2, 1fr); /* Dve kolone */
-   gap: 20px; /* razmak između videa, po želji */
-   padding: 10px; /* dodatno, ako hoćeš malo unutrašnjeg razmaka */
-
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+   padding: 10px;
     gap: 1rem;
     flex: 2;
     max-height: 90vh;
@@ -43,7 +34,6 @@ body {
     padding: 1rem;
     border-radius: 30px;
     background-color: #181818;
-  
 }
 
 .top-videos {
@@ -63,7 +53,6 @@ body {
     transform: scale(1.03);
   }
 
-  /* Webkit-based browser support */
 .video-grid::-webkit-scrollbar, .top-videos::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -86,20 +75,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start; /* <-- levo poravnanje */
+    align-items: flex-start;
     font-size: 1.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.2s;
-    overflow: hidden;
-    scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #444 #111; /* Firefox: thumb i track */
+    overflow: hidden;/* Firefox */
+  scrollbar-color: #444 #111;
 
-  height: auto;        /* ili samo izbaci height skroz */
-  min-height: 0;       /* osiguraj da se ne forsira neka druga visina */
+  height: auto;      
+  min-height: 0;    
   flex-shrink: 0; 
 
   height: auto;
-  height: 340px;
+  height: 350px;
 
   }
   
@@ -111,14 +99,14 @@ body {
   }
   
   .video_info {
-    margin-top: 0.5rem; /* smanjen razmak ispod videa */
+    margin-top: 0.5rem; 
     text-align: left;
     width: 100%;
   }
   
   .video_title {
     font-size: 1rem;
-    margin: 0 0 0.5rem 0; /* mali razmak ispod naslova */
+    margin: 0 0 0.5rem 0; 
     color: #fff;
   }
   
@@ -136,6 +124,24 @@ body {
   .vote_button:hover {
     background-color: #ff4646;
   }
+
+  .vote_button:active {
+    animation: clickPulse 0.4s ease;
+    transform: scale(0.95);
+  }
+  
+  @keyframes clickPulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 51, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(255, 0, 51, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 51, 0);
+    }
+  }
+  
 
   .top-videos h2 {
   margin-bottom: 1rem;
@@ -192,15 +198,8 @@ body {
   box-sizing: inherit;
 }
 
-/* Rest of your existing CSS remains the same */
 
-@media (min-width: 1025px) {
-  .video_container {
-  }
 
-}
-
-/* Responsive adjustments */
 @media (max-width: 1300px) {
     .main-container {
         flex-direction: column;
@@ -209,7 +208,6 @@ body {
     }
 
     .video_container {
-      /* background-color: red; */
       height: auto;
     }
     
@@ -220,7 +218,6 @@ body {
     }
     
     .top-videos {
-        /* min-width: 100%; */
         width: 100%;
         max-width: 100%;
         margin-top: 0rem;
@@ -335,8 +332,6 @@ body {
 }
 
 
-
-
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
@@ -426,8 +421,6 @@ body {
   font-size: 0.95rem;
   color: #aaa;
 }
-
-
 
 .rankings-container {
   background-color: #181818;
